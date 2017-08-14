@@ -68,7 +68,7 @@ import UIKit
             return titleLabels.map { $0.text! }
         }
         set {
-            guard newValue.count > 1 else {
+            guard newValue.count > 0 else {
                 return
             }
             let labels: [(UILabel, UILabel)] = newValue.map {
@@ -281,7 +281,7 @@ import UIKit
     }
     override open func layoutSubviews() {
         super.layoutSubviews()
-        guard titleLabelsCount > 1 else {
+        guard titleLabelsCount > 0 else {
             return
         }
         
